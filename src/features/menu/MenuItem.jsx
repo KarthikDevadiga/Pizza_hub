@@ -7,7 +7,7 @@ import CartButtons from "../../ui/cartButton";
 function MenuItem({ pizza }) {
   const { id, name, unitPrice, ingredients, soldOut, imageUrl } = pizza;
   const dispatch = useDispatch();
-  const cart = useSelector((state) => state.cartItem.cart);
+
   const item = useSelector(getItem(id));
   const inCart = item?.quantity > 0;
 
